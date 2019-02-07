@@ -9,9 +9,13 @@ type User struct {
 	name string
 }
 
+func (u User) printInformations() string {
+	return fmt.Sprintf("%.4f: %s(%d)", u.uid, u.name, u.age)
+}
 
 func main()  {
-	var kimtree = User{1, 29, "Namwoo"}
+	var kimtree = User{1.1024, 29, "Namwoo"}
 
 	fmt.Println(kimtree.name)
+	fmt.Println(kimtree.printInformations())
 }
